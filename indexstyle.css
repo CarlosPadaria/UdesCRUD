@@ -1,0 +1,139 @@
+/* Pen-specific styles */
+html,
+body,
+section {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/* Pattern styles */
+.container {
+  display: flex;
+}
+
+.hero {
+  background-color: #149B56;
+  opacity: 75%;
+  max-width: 500px;
+  min-height: 100vh;
+  padding: 2rem;
+  flex: 1.0;
+
+}
+@media screen and (max-width: 600px) {
+  .hero {
+      display: none !important;
+  }
+  .login-logo{
+    display: inline !important;
+  }
+}
+.login-screen {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+
+.logo{
+  text-decoration:none;
+  font-weight: 700;
+  color: white;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 2rem;
+}
+.welcome{
+  font-weight: 700;
+  color: white;
+  font-size: 3rem;
+}
+.hero-middle-text{
+  color: white;
+  text-align: right;
+  flex-direction: column;
+  margin-top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.website-link{
+  color: white;
+  margin-left: 2%;
+  margin-top: 35%;
+}
+
+.login-text{
+  text-align: center;
+  margin-left: auto;
+  width: 100%;
+  font-weight: 500;
+  margin-right: auto;
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+
+.input{
+  margin-top: 4rem;
+  width: 70%;
+  border-top: 0 ;
+  border-bottom: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  padding: 1rem 0;
+  transition: 0s;
+  padding-left: 1rem;
+
+}
+
+.input::placeholder{
+  color: #999999;
+}
+
+.input:focus{
+  outline: none;
+  transition: 0.5s;
+  background-color: #D6D6D6;
+  border: 0;
+}
+
+.submit{
+  background-color: #149B56;
+  color: white;
+  border: 0px;
+  font-weight: 600;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-top: 6rem;
+  width: 70%;
+  border-radius: 35.5px;
+  transition: 0.5s;
+
+}
+.submit:hover{
+  box-shadow: 10px 10px 2px 0px #000000BF;
+  transition: 0.5s;
+  background-color: #054B27;
+}
+.error-message{
+  color: #D8000C;
+  background-color: #FFBABA;
+  padding: 1rem;
+  border: 1px solid #D8000C;
+}
+
+.login-logo{
+  display: none;
+  text-align: center;
+  text-decoration:none;
+  font-weight: 700;
+  color: #149B56;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  font-size: 4rem;
+}
+
