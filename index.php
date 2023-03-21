@@ -28,7 +28,7 @@
     <div class="login-screen">
       <img src='logo.png' class="login-logo">
       <h1 class="login-text">Logar-se</h1>
-      <?php include 'services/logar.php';?>
+      <?php include 'services/logarService.php';?>
       <form action="index.php" method="post" class="login-screen">
         <input type="hidden" name="acao" value="logar">
         <input type="email" class="input" name="email" placeholder="Endereço de email">
