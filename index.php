@@ -12,9 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <section class="container">
- 
+<body onload="CarregarPagina()">
+  <div id="loader"></div>
+  <section id="container" class="container">
+
     <div class="hero">
       <a href="index.html" class="logo">UDESC</a>
       <div class="hero-middle-text">
@@ -28,7 +29,7 @@
     <div class="login-screen">
       <img src='logo.png' class="login-logo">
       <h1 class="login-text">Logar-se</h1>
-      <?php include 'services/logarService.php';?>
+      <?php include 'services/logarService.php'; ?>
       <form action="index.php" method="post" class="login-screen">
         <input type="hidden" name="acao" value="logar">
         <input type="email" class="input" name="email" placeholder="Endereço de email">
@@ -36,6 +37,16 @@
         <button class="submit">Fazer Login</button>
       </form>
     </div>
+    <script>
+      function CarregarPagina() {
+        myVar = setTimeout(showPage, 1500);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("container").style.display = "flex";
+      }
+    </script>
   </section>
 
 </body>

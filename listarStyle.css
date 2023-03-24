@@ -1,7 +1,7 @@
 body {
 
     font-family: 'Poppins', sans-serif;
-
+    margin: 0;
 }
 
 
@@ -162,7 +162,7 @@ body {
 
 .table-wrapper {
     margin-top: 5rem;
-      text-align: center;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,3 +231,65 @@ body {
         border-bottom: 1px solid;
     }
 }
+
+.register {
+    text-align: center;
+    margin-top: 6rem;
+
+}
+
+.input {
+    margin-top: 3rem;
+    width: 50%;
+    border-top: 0;
+    border-bottom: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    padding: 1rem 0;
+    transition: 0s;
+    padding-left: 1rem;
+
+}
+
+.input:focus {
+    outline: none;
+    transition: 0.5s;
+    background-color: #D6D6D6;
+    border: 0;
+}
+
+.input::placeholder {
+    color: #999999;
+
+}
+.error-message{
+    color: #D8000C;
+    background-color: #FFBABA;
+    padding: 1rem;
+    border: 1px solid #D8000C;
+  }
+  
+.submit{
+    text-align: center;
+    background-color: #149B56;
+    color: white;
+    border: 0px;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-top: 4rem;
+    width: 30%;
+    border-radius: 2rem;
+    transition: 0.5s;
+  
+  }
+  .submit:hover{
+    box-shadow: 10px 10px 2px 0px #000000BF;
+    transition: 0.5s;
+    background-color: #054B27;
+  }
+
+  .userNotFoundText{
+    text-align: center;
+    margin-top: 5em;
+  }

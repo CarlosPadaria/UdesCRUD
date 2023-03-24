@@ -23,12 +23,15 @@
             echo '<td data-label="Nome">'. $value['nome'] . '</td>';
             echo '<td data-label="Email">'. $value['email'] . '</td>';
             echo '<td data-label="Senha">'. $value['senha'] . '</td>';
-            echo '<td  data-label="Editar"><button>Editar</button></td>';
-            echo '<td data-label="Deletar"><button>Deletar</button></td>';
+            print "<td><button class='btn btn-success' onclick=\"location.href='editar.php?id=".$value['id']."';\">Editar</button></td>";
+            print "<td><button class='btn btn-danger' onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='listar.php?acao=excluir&id=".$value['id']."';}else{false;}\">Excluir</button></td>";
             echo '</tr>';
         }
         echo '</tbody>';
         echo '</table>';
+    }
+    else{
+        echo "<h1 class='userNotFoundText'>Nenhum usuário encontrado :/</h1>";
     }
     
 ?>

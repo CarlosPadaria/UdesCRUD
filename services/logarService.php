@@ -1,7 +1,6 @@
 <?php
 //include 'connection.php';
 include './models/Usuario.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['acao'] === "logar") {
 
     $usuario = new Usuario($_POST['email'], $_POST['senha']);
@@ -11,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['acao'] === "logar") {
         }
         $_SESSION['id'] = $usuario->getId();
         $_SESSION['nome'] = $usuario->getNome();
+        $_SESSION['isAdmin'] = 1;
         header("Location: listar.php");
     }
     else{

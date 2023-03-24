@@ -8,11 +8,13 @@
     <title>UdesCRUD</title>
     <link href="listarStyle.css?<?= filemtime("listarStyle.css") ?>" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www1.udesc.br&client=VFE&size=64&type=FAVICON&fallback_opts=TYPE,SIZE,URL&nfrp=2">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body onload="CarregarPagina()">
+    <?php include 'protect.php'; ?>
     <div id="loader"></div>
     <div id="main">
         <div class="header sticky" id="header">
@@ -46,8 +48,11 @@
                 }
             </script>
         </div>
-        <?php include 'services/listarService.php'; ?>
-       <!-- <div class="table-wrapper">
+        <?php
+
+        include_once('services/listarService.php'); ?>
+        <?php include_once('services/excluirService.php'); ?>
+        <!-- <div class="table-wrapper">
             
         </div>-->
     </div>
